@@ -1,6 +1,7 @@
+import React from 'react';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
-import postDetails from './Components/PostDetails/postDetails';
+import PostDetails from './Components/PostDetails/PostDetails';
 
 import {
   BrowserRouter as Router,
@@ -26,7 +27,7 @@ function App() {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/">Users</Link>
+              <Link to="/post/:id">Post Details</Link>
             </li>
           </ul>
         </nav>
@@ -43,7 +44,7 @@ function App() {
             </Route>
             
             <Route path="/post/:id">
-                <postDetails></postDetails>
+                <PostDetails></PostDetails>
             </Route>
         </Switch>
       </div>

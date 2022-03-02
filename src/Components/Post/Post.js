@@ -5,7 +5,7 @@ const Post = (props) => {
     const {userId,id,title,body}= props.post;
     const history = useHistory();
 
-    const postHandler = id => {
+    const showDetails = id => {
         const url =`post/${id}`;
         history.push(url);
     }
@@ -18,9 +18,9 @@ const Post = (props) => {
     }
     return (
         <div style={postStyle}>
-            <h3> <strong>{id} : </strong>Title: {title}</h3>
+            <h3> <strong>ID: {id} </strong> {title}</h3>
             <p>{body}</p>
-            <button onClick={()=> postHandler(id)}>Details</button>
+            <button onClick={()=> showDetails(id)}>Show Comments</button>
         </div>
     );
 };
